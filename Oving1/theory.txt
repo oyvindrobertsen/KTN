@@ -1,0 +1,35 @@
+Exercise 1 - Theory part:
+
+1.a) 4n
+
+1.b) 2n
+
+2.a) d_prop = s/m seconds
+
+2.b) d_trans = R/L seconds
+
+2.c) d_end-to-end = (m/s + L/R) seconds
+
+2.d) The bit is just leaving Host A
+
+2.e) The bit is in the link and has not reached Host B
+
+2.f) The bit has reached Host B
+
+2.g) 893 km
+
+3.a) d_end-to-end = L/R_1 + L/R_2 + d_1/s_1 + d_2/s_2 + d_proc
+
+3.b) 54 msec
+
+4)   (N-1)L/(2R)
+
+5.a.1) 4 sec
+
+5.a.2) 12 sec
+
+5.b.1) 1 msec
+
+5.b.2) 2 msec
+
+5.c) 4.002 sec
