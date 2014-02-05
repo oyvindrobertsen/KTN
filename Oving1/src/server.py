@@ -45,7 +45,7 @@ while True:
         response_status_text = 'File not found'
 
         connectionSocket.send('%s %s %s' % (response_proto, response_status, response_status_text))
-        connectionSocket.send('Connection: close')
+        connectionSocket.send('Connection: close\n')
         connectionSocket.send('\n')
         connectionSocket.send('<h1>404 File not found</h1>')
 
@@ -57,7 +57,7 @@ while True:
         response_status_text = 'Internal Server Error'
 
         connectionSocket.send('%s %s %s' % (response_proto, response_status, response_status_text))
-        connectionSocket.send('Connection: close')
+        connectionSocket.send('Connection: close\n')
         connectionSocket.send('\n')
         connectionSocket.send('<h1>500 Internal Server Error</h1>')
 

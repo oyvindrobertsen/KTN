@@ -1,0 +1,25 @@
+1.a) False
+
+1.b) True
+
+1.c) False
+
+1.d) False
+
+2.a) http://gaia.cs.umass.edu/cs453/index.html
+
+2.b) 1.1
+
+2.c) persistent
+
+2.d) It cannot be decided from the given information
+
+3.a) It was successful and the time was Tue, 07 Mar 2006 12:39:45 GMT
+
+3.b) The document was modified on Sat, 10 Dec 2005 18:27:46 GMT
+
+3.c) 3874
+
+3.d) The first five bytes of the returned document are: <!doc. The server agreed to a persistent connection.
+
+4 2RTT_0 + RTT_1 + RTT_2 +…+ RTT_n
