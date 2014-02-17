@@ -14,7 +14,7 @@ def ping_function(count):
             client_socket.sendto(msg, address)
             response, addr = client_socket.recvfrom(1024)
             rtt = datetime.now() - datetime.strptime(' '.join(response.split(' ')[2:]), '%Y-%m-%d %H:%M:%S.%f')
-            print response + ', RTT = ' + str(rtt)
+            print response + ', RTT = ' + str(rtt.total_seconds()) + 's'
         except Exception, e:
             print 'Ping ' + str(i) + ' ' + str(e)
 
