@@ -1,16 +1,26 @@
 import sys
-from socket import *
+import socket
 from datetime import datetime
 
 address = ('', 12000)
-client_socket = socket(AF_INET, SOCK_DGRAM)
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 client_socket.settimeout(1)
 
-if len(sys.argv) > 1:
-    for i in xrange(int(sys.argv[1])):
-        msg = 'Ping     ' + str(i) + '       ' + str(datetime.now())
+
+def ping_function(count):
+    for i in xrange(count):
+        msg = 'Ping ' + str(i) + ' ' + str(datetime.now())
         try:
             client_socket.sendto(msg, address)
-            print client_socket.recvfrom(1024)
+            response, addr = client_socket.recvfrom(1024)
+            rtt = datetime.now() - datetime.strptime(' '.join(response.split(' ')[2:]), '%Y-%m-%d %H:%M:%S.%f')
+            print response + ', RTT = ' + str(rtt)
         except Exception, e:
-            print e
+            print 'Ping ' + str(i) + ' ' + str(e)
+
+
+if len(sys.argv) > 1:
+    ping_function(int(sys.argv[1]))  # First argument is always filename, second is
+                                  # optional number of packets to send.
+else:
+    ping_function(10)             # If called with no arguments, send 10 packets
